@@ -2,7 +2,7 @@
 %define plugin	externalplayer
 %define name	vdr-plugin-%plugin
 %define version	0.1.0
-%define rel	8
+%define rel	9
 
 Summary:	VDR plugin: launch external players
 Name:		%name
