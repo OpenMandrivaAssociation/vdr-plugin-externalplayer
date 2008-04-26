@@ -2,7 +2,7 @@
 %define plugin	externalplayer
 %define name	vdr-plugin-%plugin
 %define version	0.1.0
-%define rel	12
+%define rel	13
 
 Summary:	VDR plugin: launch external players
 Name:		%name
@@ -12,8 +12,9 @@ Group:		Video
 License:	GPL
 URL:		http://sourceforge.net/projects/externalplayer
 Source:		http://prdownloads.sourceforge.net/externalplayer/vdr-%plugin-%version.tar.bz2
+Patch0:		externalplayer-0.1.0-i18n-1.6.patch
 BuildRoot:	%{_tmppath}/%{name}-buildroot
-BuildRequires:	vdr-devel >= 1.4.1-6
+BuildRequires:	vdr-devel >= 1.6.0
 Requires:	vdr-abi = %vdr_abi
 
 %description
@@ -21,6 +22,8 @@ This can be used to launch external players from main menu.
 
 %prep
 %setup -q -n %plugin-%version
+%patch0 -p1
+%vdr_plugin_prep
 
 %vdr_plugin_params_begin %plugin
 # specify path to an alternative config file
@@ -50,5 +53,3 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc README HISTORY
 %config(noreplace) %{_vdr_plugin_cfgdir}/externalplayer.conf
-
-
