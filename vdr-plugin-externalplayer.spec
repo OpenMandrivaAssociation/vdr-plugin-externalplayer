@@ -2,7 +2,7 @@
 %define plugin	externalplayer
 %define name	vdr-plugin-%plugin
 %define version	0.1.0
-%define rel	18
+%define rel	19
 
 Summary:	VDR plugin: launch external players
 Name:		%name
@@ -37,12 +37,6 @@ param=--config=CFGFILE
 %vdr_plugin_install
 
 install -D -m644 examples/externalplayer.conf %{buildroot}%{vdr_plugin_cfgdir}/externalplayer.conf
-
-%post
-%vdr_plugin_post %plugin
-
-%postun
-%vdr_plugin_postun %plugin
 
 %files -f %plugin.vdr
 %defattr(-,root,root)
