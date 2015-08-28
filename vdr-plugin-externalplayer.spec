@@ -3,7 +3,7 @@
 Summary:	VDR plugin: launch external players
 Name:		vdr-plugin-%plugin
 Version:	0.1.0
-Release:	20
+Release:	21
 Group:		Video
 License:	GPL
 URL:		http://sourceforge.net/projects/externalplayer
