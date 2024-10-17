@@ -6,7 +6,7 @@ Version:	0.1.0
 Release:	21
 Group:		Video
 License:	GPL
-URL:		http://sourceforge.net/projects/externalplayer
+URL:		https://sourceforge.net/projects/externalplayer
 Source:		http://prdownloads.sourceforge.net/externalplayer/vdr-%plugin-%{version}.tar.bz2
 Patch0:		externalplayer-0.1.0-i18n-1.6.patch
 BuildRequires:	vdr-devel >= 1.6.0
